@@ -47,18 +47,7 @@ dependencies {
     implementation "org.lwjgl:lwjgl-openal"
     implementation "org.lwjgl:lwjgl-opengl"
 
-    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
-        implementation "org.lwjgl:lwjgl::natives-windows"
-        implementation "org.lwjgl:lwjgl-glfw::natives-windows"
-        implementation "org.lwjgl:lwjgl-nanovg::natives-windows"
-        implementation "org.lwjgl:lwjgl-openal::natives-windows"
-        implementation "org.lwjgl:lwjgl-opengl::natives-windows"
-        compileOnly "org.lwjgl:lwjgl::natives-windows"
-        compileOnly "org.lwjgl:lwjgl-glfw::natives-windows"
-        compileOnly "org.lwjgl:lwjgl-nanovg::natives-windows"
-        compileOnly "org.lwjgl:lwjgl-openal::natives-windows"
-        compileOnly "org.lwjgl:lwjgl-opengl::natives-windows"
-    } else if(Os.isFamily(Os.FAMILY_MAC)) {
+
                 implementation "org.lwjgl:lwjgl::natives-macos"
         implementation "org.lwjgl:lwjgl-glfw::natives-macos"
         implementation "org.lwjgl:lwjgl-nanovg::natives-macos"
@@ -69,18 +58,7 @@ dependencies {
         compileOnly "org.lwjgl:lwjgl-nanovg::natives-macos"
         compileOnly "org.lwjgl:lwjgl-openal::natives-macos"
         compileOnly "org.lwjgl:lwjgl-opengl::natives-macos"
-    } else {
-        implementation "org.lwjgl:lwjgl::natives-linux"
-        implementation "org.lwjgl:lwjgl-glfw::natives-linux"
-        implementation "org.lwjgl:lwjgl-nanovg::natives-linux"
-        implementation "org.lwjgl:lwjgl-openal::natives-linux"
-        implementation "org.lwjgl:lwjgl-opengl::natives-linux"
-        compileOnly "org.lwjgl:lwjgl::natives-linux"
-        compileOnly "org.lwjgl:lwjgl-glfw::natives-linux"
-        compileOnly "org.lwjgl:lwjgl-nanovg::natives-linux"
-        compileOnly "org.lwjgl:lwjgl-openal::natives-linux"
-        compileOnly "org.lwjgl:lwjgl-opengl::natives-linux"
-    }
+
 
     compileOnly platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
     compileOnly "org.lwjgl:lwjgl"
